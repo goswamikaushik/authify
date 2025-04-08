@@ -1,1 +1,6 @@
-pnpm build
+echo "🧪 Running pre-commit checks..."
+echo "🔍 Linting staged files and formatting code (eslint + prettier)..."
+
+npx lint-staged
+
+echo "✅ Code quality checks passed!"
