@@ -1,6 +1,16 @@
-echo "🧪 Running pre-commit checks..."
-echo "🔍 Linting staged files and formatting code (eslint + prettier)..."
+# set -e immediately exits if a command exits with a non-zero status
+set -e
 
+echo ""
+echo "🧪  Running pre-commit checks..."
+echo ""
+echo "🔍  Linting staged files and formatting code (eslint + prettier)..."
+echo ""
+
+# lint-staged command (check package.json for details)
+# This command will run eslint and prettier on the staged files
 npx lint-staged
 
-echo "✅ Code quality checks passed!"
+echo ""
+echo "✅  Code quality checks passed!"
+echo ""
