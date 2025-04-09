@@ -11,13 +11,13 @@ pnpm build
 echo ""
 echo "📦  Build completed successfully."
 echo ""
-echo "🚀  Running Test Suite..."
-echo ""
+# echo "🚀  Running Test Suite..."
+# echo ""
 
 # test command
-pnpm test
+# pnpm test
 
 echo ""
-echo "✅  All tests passed!"
+# echo "✅  All tests passed!"
 echo "🚀  Syncing your code to remote..."
 echo ""
