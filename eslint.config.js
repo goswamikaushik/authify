@@ -22,15 +22,15 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }]
-    },
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
 
-    // ⚠️ Prettier rules
-    'prettier/prettier': 'error',
+      // ⚠️ Prettier rules
+      'prettier/prettier': 'error',
 
-    // ⚠️ ESLint rules
-    'no-var': 'error', // ✅ Use let/const instead of var
-    'no-return-await': 'error', // ✅ Avoid unnecessary return await
-    'require-await': 'error' // ✅ Avoid async functions that don't use await
+      // ⚠️ ESLint rules
+      'no-var': 'error', // ✅ Use let/const instead of var
+      'no-return-await': 'error', // ✅ Avoid unnecessary return await
+      'require-await': 'error' // ✅ Avoid async functions that don't use await
+    }
   }
 );

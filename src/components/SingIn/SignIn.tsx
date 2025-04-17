@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const SignIn = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,12 +13,9 @@ const SignIn = () => {
         <div>
           <label>Password</label>
           <div>
-            <input
-              type={isVisible ? "text" : "password"}
-              placeholder="Password"
-            />
+            <input type={isVisible ? 'text' : 'password'} placeholder="Password" />
             <button type="button" onClick={() => setIsVisible(!isVisible)}>
-              {isVisible ? "Hide" : "Show"}
+              {isVisible ? 'Hide' : 'Show'}
             </button>
           </div>
         </div>
