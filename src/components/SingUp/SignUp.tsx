@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function SignUp() {
   const [visible, setVisible] = useState({
     password: false,
-    confirmPassword: false,
+    confirmPassword: false
   });
 
-  const toggleVisibility = (field: "password" | "confirmPassword") => {
+  const toggleVisibility = (field: 'password' | 'confirmPassword') => {
     setVisible((prev) => ({
       ...prev,
-      [field]: !prev[field],
+      [field]: !prev[field]
     }));
   };
 
@@ -28,12 +28,9 @@ export default function SignUp() {
         <div>
           <label>Password</label>
           <div>
-            <input
-              type={visible.password ? "text" : "password"}
-              placeholder="********"
-            />
-            <button type="button" onClick={() => toggleVisibility("password")}>
-              {visible.password ? "Hide" : "Show"}
+            <input type={visible.password ? 'text' : 'password'} placeholder="********" />
+            <button type="button" onClick={() => toggleVisibility('password')}>
+              {visible.password ? 'Hide' : 'Show'}
             </button>
           </div>
         </div>
@@ -41,15 +38,9 @@ export default function SignUp() {
         <div>
           <label>Confirm Password</label>
           <div>
-            <input
-              type={visible.confirmPassword ? "text" : "password"}
-              placeholder="********"
-            />
-            <button
-              type="button"
-              onClick={() => toggleVisibility("confirmPassword")}
-            >
-              {visible.confirmPassword ? "Hide" : "Show"}
+            <input type={visible.confirmPassword ? 'text' : 'password'} placeholder="********" />
+            <button type="button" onClick={() => toggleVisibility('confirmPassword')}>
+              {visible.confirmPassword ? 'Hide' : 'Show'}
             </button>
           </div>
         </div>
