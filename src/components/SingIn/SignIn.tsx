@@ -1,27 +1,19 @@
-import { useState } from 'react';
+import { Form } from 'react-router';
+import Input from '../Input/Input';
+import Button from '../Button/Button';
 
 const SignIn = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log('Form submitted');
+  };
+
   return (
-    <div>
-      <h2>Sign In</h2>
-      <form>
-        <div>
-          <label>Email</label>
-          <input type="email" placeholder="Email" />
-        </div>
-        <div>
-          <label>Password</label>
-          <div>
-            <input type={isVisible ? 'text' : 'password'} placeholder="Password" />
-            <button type="button" onClick={() => setIsVisible(!isVisible)}>
-              {isVisible ? 'Hide' : 'Show'}
-            </button>
-          </div>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <Form onSubmit={handleSubmit}>
+      <Input type="email" placeholder="Email:" />
+      <Input type="password" placeholder="Password:" />
+      <Button type="submit">Login</Button>
+    </Form>
   );
 };
 

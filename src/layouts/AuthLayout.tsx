@@ -5,7 +5,9 @@ import AuthMiddleware from '../middleware/AuthMiddleware';
 const AuthLayout: FC<PropsWithChildren> = () => {
   return (
     <AuthMiddleware>
-      <Outlet />
+      <div className="flex h-screen flex-col items-center justify-center">
+        <Outlet />
+      </div>
     </AuthMiddleware>
   );
 };
