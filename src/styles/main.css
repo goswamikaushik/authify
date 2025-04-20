@@ -1,32 +1,13 @@
 @import 'tailwindcss';
 
-/* this is for dark mode */
-@custom-variant dark (&:where(.dark, .dark *));
+/* @theme {  instead of using the default theme colors, we are going to use our own }*/
 
-@theme {
-  /* instead of using the default theme colors, we are going to use our own */
-  --color-*: initial;
-  --color-white: #fff;
-  --color-purple: #3f3cbb;
-  --color-midnight: #121063;
-  --color-tahiti: #3ab7bf;
-  --color-bermuda: #78dcca;
+#root {
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 #root {
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  min-height: 100vh;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply mx-auto min-h-screen bg-white text-center font-sans text-base leading-normal font-normal text-black antialiased;
 }
